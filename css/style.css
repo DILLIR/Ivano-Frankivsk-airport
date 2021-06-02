@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Noto Sans', sans-serif;
+}
+
+.container {
+	max-width: calc(1440 / 1920 * 100%);
+	margin: 0 auto;
+}
+
+.header {
+	background: white;
+	width: 100%;
+	height: 105px;
+	display: grid;
+	grid-template-columns: calc(280 / 1440 * 100%) calc(600 / 1440 * 100%) calc(360 / 1440 * 100%) calc(133/ 1440 * 100%);
+	align-items: center;
+	border-bottom: 5px solid #3CA0D0;
+	padding: 0 0 0 64px;
+}
+
+.footer {
+	width: 100%;
+	height: 200px;
+	background: #155776;
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-rows: 1fr auto;
+	padding: 37px 64px 9px 85px;
+	color: #BDBDBD;
+}
+
+.header_title {
+	color: #086FA1;
+	font-size: 48px;
+}
+
+.menu {
+	font-size: 24px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 1fr;
+	grid-gap: calc(35 / 1920 * 100%);
+	align-items: center;
+	margin-left: calc(53 / 1920 * 100%);
+}
+
+.logo {
+	grid-column: 4/5;
+}
+
+.footer_menu {
+	font-size: 13px;
+}
+.footer_menu h1 {
+	color: white;
+	font-size: 24px;
+}
+
+.certificate {
+	color: white;
+	text-align: center;
+	font-size: 18px;
+	padding-top: 48px;
+}
+
+.partners {
+	font-size: 13px;
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+	grid-template-rows: repeat(2, auto);
+}
+
+.partners p {
+	grid-column: 1/3;
+}
+
+.rights {
+	grid-column: 1/4;
+	text-align: center;
+	font-size: 13px;
+}
+
+/* основна частина */
+
+
+.about_us_title {
+	width: 100%;
+	height: 607px;
+	background-image: url(../img/about_us_first.png);
+	padding: 0 0 50px 64px;
+	display: flex;
+	flex-direction: column-reverse;
+	font-size: 48px;
+	color: white;
+}
+
+.about_us_title .line {
+	width: 500px;
+	height: 1px;
+	background: white;
+}
+
+.about_us_history {
+	width: 1270px;
+	float: right;
+	padding: 10px 18px 42px 44px;
+	font-size: 18px;
+	background: #C9EEFF;
+	margin-top: 82px;
+
+}
+
+.about_us_history h1, .about_us_facts h1, .about_us_gallery h1 {
+	text-align: center;
+	border-bottom: 3px solid #3CA0D0;
+	width: 200px;
+	margin: 0 auto;
+	margin-bottom: 25px;
+	font-size: 48px;
+}
+
+.about_us_facts h1 {
+	width: 170px;
+	padding-bottom: 10px;
+}
+
+.about_us_facts {
+	width: 1318px;
+	background: #C9EEFF;
+	float: left;
+	margin: 145px 0 145px 0;
+	padding: 21px 46px 35px 70px;
+	line-height: 25px;
+}
+
+.about_us_gallery h1 {
+	width: 346px;
+}
+
+.about_us_gallery {
+	margin-top: 145px;
+	padding: 0 64px 0 64px;
+}
+
+.gallery_lines * {
+	float: right;
+	background: #3CA0D0;
+}
+.gallery_lines_vertical * {
+	float: left;
+	background: #3CA0D0;
+}
