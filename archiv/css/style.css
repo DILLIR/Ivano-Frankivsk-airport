@@ -7,20 +7,30 @@
 	font-family: 'Noto Sans', sans-serif;
 }
 
+
 .container {
-	max-width: calc(1440 / 1920 * 100%);
+	max-width: 1000px;
+	position: relative;
 	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
 }
 
 .header {
 	background: white;
 	width: 100%;
 	height: 105px;
-	display: grid;
-	grid-template-columns: calc(280 / 1440 * 100%) calc(600 / 1440 * 100%) calc(360 / 1440 * 100%) calc(133/ 1440 * 100%);
-	align-items: center;
 	border-bottom: 5px solid #3CA0D0;
 	padding: 0 0 0 64px;
+	position: fixed;
+	z-index: 3;
+}
+.header .container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	margin-top: 10px;
 }
 
 .footer {
@@ -34,14 +44,17 @@
 	color: #BDBDBD;
 }
 
-.header_title {
-	color: #086FA1;
-	font-size: 48px;
+.header_logo{
+	max-width: 100%;
 }
-
+.menu__link{
+	text-decoration: none;
+	color: #000;
+}
 .menu {
 	font-size: 24px;
 	display: grid;
+	width: 60%;
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: 1fr;
 	grid-gap: calc(35 / 1920 * 100%);
@@ -88,26 +101,32 @@
 /* основна частина */
 
 
-.about_us_title {
+.banner {
 	width: 100%;
 	height: 607px;
 	background-image: url(../img/about_us_first.png);
-	padding: 0 0 50px 64px;
+	background-size: cover;
+	background-repeat: no-repeat;
 	display: flex;
 	flex-direction: column-reverse;
 	font-size: 48px;
 	color: white;
 }
 
-.about_us_title .line {
+.banner_heading{
+	font-size: 48px;
+	text-align: left;
+}
+
+.line {
 	width: 500px;
 	height: 1px;
 	background: white;
 }
 
 .about_us_history {
-	width: 1270px;
-	float: right;
+	width: 100%;
+	border-left: 170px solid white;
 	padding: 10px 18px 42px 44px;
 	font-size: 18px;
 	background: #C9EEFF;
@@ -130,7 +149,8 @@
 }
 
 .about_us_facts {
-	width: 1318px;
+	width: 100%;
+	border-right: 122px solid white;
 	background: #C9EEFF;
 	float: left;
 	margin: 145px 0 145px 0;
@@ -145,6 +165,7 @@
 .about_us_gallery {
 	margin-top: 145px;
 	padding: 0 64px 0 64px;
+	width: 100%;
 }
 
 .gallery_lines * {
@@ -154,4 +175,17 @@
 .gallery_lines_vertical * {
 	float: left;
 	background: #3CA0D0;
+}
+
+.gallery img:hover {
+	transform: scale(1.05);
+	transition: all 0.5s;
+}
+@media screen and (max-width:  1840px){
+	.header_title{
+		font-size: 2em;
+	}
+	.menu{
+		font-size: 20px;
+	}
 }
