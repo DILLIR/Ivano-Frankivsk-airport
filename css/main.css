@@ -20,7 +20,7 @@ body{
 
 .header{
 	height: 12vh;
-	width: 100vw;
+	width: 100%;
 	background: #fff;
 	border-bottom: 5px solid #3CA0D0;
 	position: fixed;
@@ -64,12 +64,38 @@ body{
   width: 100%;
 }
 /******Banner Styles******/
+
+.main{
+	padding-top: 10vh;
+	display: flex;
+	flex-direction: column;
+}
+.banner .container{
+	padding: 0px;
+	display: flex;
+	height: 90vh;
+	justify-content: flex-end;
+	align-items: flex-start;
+	flex-direction: column-reverse;
+	padding-bottom: 49px;
+}
+.banner__heading{
+	font-size: 55px;
+	color: #fff;
+	font-weight: 300;
+	border-bottom: 2px solid white;
+	max-width: 521px;
+	margin-left:100px;
+	font-weight: 300;
+	font-size: 70px;
+	line-height: 95px;
+	margin-top: 100px;
+}
 .banner__status{
 	margin-top: 10px;
 	display: flex;
 	align-items: center;
 	align-self: flex-end;
-	margin-bottom: 55vh;
 	padding: 30px;
 }
 .banner__city{
@@ -82,53 +108,54 @@ body{
 	border-radius: 3px;
 	padding: 5px 10px;
 }
-.main{
-	padding-top: 10vh;
-	display: flex;
-	flex-direction: column;
-}
-#parallax-window {
-    min-height: 90vh;
-    background: transparent;
-}
-.banner .container{
-	padding: 0px 30px;
-	display: flex;
-	height: 90vh;
-	justify-content: flex-end;
-	align-items: flex-start;
-	flex-direction: column;
-	padding-bottom: 49px;
-}
-.banner__heading{
-	font-size: 48px;
-	color: #fff;
-	font-weight: 300;
-}
-.banner_line{
-	background: #fff;
-	height: 1px;
-	width: 500px;
-}
 
 /*****Info Styles******/
 .info{
-	margin-top: 54px;
+	margin-top: 75px;
 	padding: 0px 30px;
 }
 .info__text{
-	border: 1px solid #3CA0D0;
 	font-size: 16px;
 	line-height: 21.79px;
-	padding: 24px 108px 23px 32px;
-	width: 90%;
+	padding: 24px 50px 23px 32px;
+	width: 100%;
 }
-
+.corona{
+	max-width: 1200px;
+	height: auto;
+	border: 1px solid #3CA0D0;
+	margin: 0 auto;
+}
+.corona_img{
+	float:left; 
+	margin-top: 100px;
+	margin-left: 30px;
+	margin-right: 20px;
+	width: 230px;
+	height: 250px;
+	padding-top: 10px;
+	padding-left: 20px;
+}
+.corona_alert{
+	width: 100%;
+}
 /*****Flights Styles******/
-
+.closest_flights{
+	margin: 0 auto;
+font-style: normal;
+font-weight: normal;
+font-size: 36px;
+line-height: 42px;
+text-align: center;
+color: white;
+height:37px;
+margin-top:50px;
+}
 .flights{
-	margin-top: 75px;
+
 	padding: 0px 30px;
+	background: #086FA1;
+	color: white;
 }
 .flights__icon{
 	width: 32px;
@@ -138,6 +165,7 @@ body{
 	justify-content: space-between;
 	border-bottom: 5px solid #086FA1;
 	padding-bottom: 10px;
+	color: white;
 }
 .flights__heading{
 	font-family: Noto Sans;
@@ -145,6 +173,7 @@ body{
 	font-weight: normal;
 	font-size: 36px;
 	line-height: 49px;
+	color: white;
 }
 
 .table__header{
@@ -154,7 +183,7 @@ body{
 	font-size: 16px;
 	font-weight: 700;
 	justify-content: space-between;
-	border-bottom:  2px solid black;
+	border-bottom:  2px solid white;
 }
 .table__main{
 	display: flex;
@@ -169,18 +198,10 @@ body{
 	justify-content: space-between;
 	align-items: center;
 	width: 100%;
-	color: #086FA1;
+	color: white;
 	margin-bottom: 10px;
-}
-.table__line:hover{
 	background: #086FA1;
-	color: #fff;
-	border-radius: 5px;
 }
-.table__line:hover .day__icon-blue{
-	background: #fff;
-	color: #086FA1;
-
 }
 .table__day{
 	width: 20%;
@@ -192,8 +213,8 @@ body{
 	margin: 2px;
 }
 .day__icon-blue{
-	background: #086FA1;
-	color:  #fff;
+	background: white;
+	color:  #086FA1;
 	border-radius: 3px;
 	padding: 5px;
 }
@@ -221,6 +242,116 @@ body{
 .table__plane{
 	width: 10%;
 }
+.flights_graph{
+height: 40px;
+width: 250px;
+margin: 0 auto;
+text-align: center;
+padding-top: 2px;
+font-style: normal;
+font-weight: 300;
+font-size: 24px;
+line-height: 28px;
+color: white;
+border: 2px solid white;
+margin-top: 70px;
+margin-bottom: 40px;
+}
+.flights_graph:hover{
+	background: white;
+	color: #086FA1;
+}
+.transition{
+  transition: 1s;
+}
+
+/*****Якась група хз styles****/
+
+.some_group_idk{
+	display: flex;
+	align-content: space-between;
+	width: 1200px;
+	height: 360px;
+	border-top: 2px solid #BDBDBD;
+	border-bottom: 2px solid #BDBDBD;
+	margin: 0 auto;
+	margin-top: 125px;
+}
+.group_tickets{
+	width: 25%;
+	height: 100%;
+	padding-top: 5%;
+}
+.group_tickets_img{
+	width: 65%;
+	height: 46%;
+	background: #086FA1;
+	margin: 0 auto;
+	clip-path: circle(40% at 50% 50%);
+}
+.group_ideas{
+	width: 25%;
+	height: 100%;
+	padding-top: 5%;
+}
+.group_ideas_img{
+	width: 65%;
+	height: 46%;
+	background: #086FA1;
+	margin: 0 auto;
+	clip-path: circle(40% at 50% 50%);
+}
+.group_about{
+	width: 25%;
+	height: 100%;
+	padding-top: 5%;
+}
+.group_about_img{
+	width: 65%;
+	height: 46%;
+	background: #086FA1;
+	margin: 0 auto;
+	clip-path: circle(40% at 50% 50%);
+}
+.group_weather{
+	width: 25%;
+	height: 100%;
+	padding-top: 5%;
+}
+.group_weather_img{
+	width: 65%;
+	height: 46%;
+	background: #086FA1;
+	margin: 0 auto;
+	clip-path: circle(40% at 50% 50%);
+}
+.group_tickets_img:hover{
+	width: 70%;
+	height: 50%;
+}
+.group_ideas_img:hover{
+	width: 70%;
+	height: 50%;
+}
+.group_about_img:hover{
+	width: 70%;
+	height: 50%;
+}
+.group_weather_img:hover{
+	width: 70%;
+	height: 50%;
+}
+.additional_banner{
+	width: 1150px;
+	height: 150px;
+	margin: 0 auto;
+	margin-top: 100px;
+	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url(../img/addbanner.png);
+}
+
 /*****Footer Styles****/
 .footer{
     margin-top: 5%;
