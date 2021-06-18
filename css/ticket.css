@@ -1,25 +1,18 @@
-* {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
-.container{
-	max-width: 1440px;
-	margin: 0 auto;
-	position: relative;
-}
-img{
-	max-width: 100%;
-}
-body{
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 	font-family: 'Noto Sans', sans-serif;
 }
 
-/******Heading Styles******/
+.container {
+	max-width: 100vw;
+}
 
 .header{
-	height: 12vh;
+	height: 10vh;
 	width: 100vw;
 	background: #fff;
 	border-bottom: 5px solid #3CA0D0;
@@ -32,7 +25,6 @@ body{
 	align-items: center;
 	justify-content: space-between;
 	padding: 0px 30px;
-	height: 12vh;
 }
 
 .menu{
@@ -63,38 +55,15 @@ body{
 .menu__link:hover:before{
   width: 100%;
 }
-/******Banner Styles******/
-.banner__status{
-	margin-top: 10px;
-	display: flex;
-	align-items: center;
-	align-self: flex-end;
-	margin-bottom: 55vh;
-	padding: 30px;
-}
-.banner__city{
-	margin-right: 20px;
-	color: #fff;
-}
-.banner__hour{
-	background: #fff;
-	color:  #000;
-	border-radius: 3px;
-	padding: 5px 10px;
-}
-.main{
-	padding-top: 10vh;
-	display: flex;
-	flex-direction: column;
-}
+/* основна частина */
 #parallax-window {
-    min-height: 90vh;
+    min-height: 100vh;
     background: transparent;
 }
 .banner .container{
 	padding: 0px 30px;
 	display: flex;
-	height: 90vh;
+	height: 100vh;
 	justify-content: flex-end;
 	align-items: flex-start;
 	flex-direction: column;
@@ -111,117 +80,133 @@ body{
 	width: 500px;
 }
 
-/*****Info Styles******/
-.info{
-	margin-top: 54px;
-	padding: 0px 30px;
-}
-.info__text{
-	border: 1px solid #3CA0D0;
-	font-size: 16px;
-	line-height: 21.79px;
-	padding: 24px 108px 23px 32px;
-	width: 90%;
+
+.ticket-title {
+	width: 100%;
+	height: 750px;
+	background-image: url(../img/ticket_main.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 0 12% 42px 12%;
+	display: flex;
+	flex-direction: column-reverse;
+	font-size: 48px;
+	color: white;
 }
 
-/*****Flights Styles******/
-
-.flights{
-	margin-top: 75px;
-	padding: 0px 30px;
-}
-.flights__icon{
-	width: 32px;
-}
-.flights__header{
+.ticket-mid {
+	width: calc(1280 / 1900 * 100vw);
+	margin: 0 auto;
+	margin-top: 160px;
+	margin-bottom: 30px;
 	display: flex;
 	justify-content: space-between;
-	border-bottom: 5px solid #086FA1;
-	padding-bottom: 10px;
+	align-items: center;
 }
-.flights__heading{
-	font-family: Noto Sans;
-	font-style: normal;
-	font-weight: normal;
+
+.ticket-mid .line {
+	background: #BDBDBD;
+	width: calc(1140 / 1900 * 100vw);
+}
+
+.line {
+	width: 500px;
+	height: 1px;
+	background: white;
+}
+
+.flights {
+	width: calc(1280 / 1900 * 100vw);
+	border: 3px solid #086FA1;
+	height: 750px;
+	padding: 4%;
+	margin: 0 auto;
+	margin-bottom: 100px;
+}
+
+
+.flights > p {
+	color: #086FA1;
+	margin-bottom: 40px;
 	font-size: 36px;
-	line-height: 49px;
 }
 
-.table__header{
-	padding: 0px 30px 10px 30px;
-	margin-top: 60px;
-	display: flex;
-	font-size: 16px;
-	font-weight: 700;
-	justify-content: space-between;
-	border-bottom:  2px solid black;
+.ticket-left {
+	width: calc(360 / 1900 * 100vw);
+	float: left;
 }
-.table__main{
+
+.ticket-list {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	margin-top: 30px;
+	height: 380px;
 }
-.table__line{
-	display: flex;
-	padding: 5px 30px 7px 30px;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
-	color: #086FA1;
-	margin-bottom: 10px;
-}
-.table__line:hover{
-	background: #086FA1;
-	color: #fff;
-}
-.table__line:hover .day__icon-blue{
-	background: #fff;
-	color: #086FA1;
 
+.ticket-list li:nth-child(even) {
+	height: 40px;
+	width: calc(360 / 1900 * 100vw);
+	background: #F0F0F0;
+	border: 1px solid #3CA0D0;
+	margin-bottom: 37px;
+	margin-top: 5px;
 }
-.table__day{
-	width: 20%;
+
+.adults-children {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
 }
-.day__icon{
-	width: 15px;
-	height: 15px;
-	font-size: 12px;
-	margin: 2px;
+
+.adults-children span {
+	background: #F0F0F0;
+	border: 1px solid #3CA0D0;
+	padding:2px 8px;
 }
-.day__icon-blue{
+
+.order {
+	color: white;
 	background: #086FA1;
-	color:  #fff;
-	border-radius: 3px;
-	padding: 5px;
+	border-radius: 5px;
+	text-align: center;
+	width: 56%;
+	margin-top: 40px;
 }
-.table__race{
-	width: 25%;
+
+.cities {
+	width: 50%;
+	font-size: 48px;
+	color: white;
+	float: right;
 }
-.table__company{
+
+.cities li {
+	width: calc(550 / 1903s * 100vw);
+	height: 160px;
 	display: flex;
+	background-size: cover;
+	background-repeat: no-repeat;
 	align-items: center;
+	padding-left: 20px;
 }
-.table__company img{
-	margin-right: 10px;
-	width: 30%;
+
+.cities li img {
+	width: calc(48 / 1900 * 100vw);
+	height: calc(48 / 1900 * 100vw);
+	margin-right: 17px;
 }
-.table__departure{
-	width: 5%;
-	display: flex;
-	justify-content: center;
+
+.cities li:nth-child(1) {
+	background-image: url(../img/kyiv.png);
 }
-.table__arrival{
-	width: 5%;
-	display: flex;
-	justify-content: center;
+.cities li:nth-child(2) {
+	background-image: url(../img/dnipro.png);
+	margin: 27px 0;
 }
-.table__plane{
-	width: 10%;
+.cities li:nth-child(3) {
+	background-image: url(../img/odesa.png);
 }
-/*****Footer Styles****/
+
 .footer{
-    margin-top: 5%;
     height: 220px;
     width: 100%;
     background: #155776;
