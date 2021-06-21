@@ -36,48 +36,83 @@
 					<div class="line"></div>
 				</div>
 				<div class="flights">
-					<p>РЕЙСИ З ІВАНО-ФРАНКІВСЬКА</p>
-					<div class="ticket-menu">
-						<div class="ticket-left">
-							<ul type="none" class="ticket-list">
-								<li>Звідки</li>
-								<li>Івано-Франківськ (IFO)</li>
-								<li>Куди</li>
-								<li></li>
-								<li>Дата</li>
-								<li></li>
-								<li>Клас</li>
-								<li>▽</li>
-							</ul>
-							<div class="adults-children">
-								<div class="a-c-left">
-									<p>Дорослі</p>
-									<h2>– <span>0</span> +</h2>
+					<p class="flights__heading">РЕЙСИ З ІВАНО-ФРАНКІВСЬКА</p>
+					<div class="flights__content">
+						<div class="flights__field flights__form form">
+							<div class="form__field">
+								<label for="" class="form__label">Звідки</label>
+								<input type="text" class="form__input" disabled value="Івано-Франківськ"> 
+							</div>
+							<div class="form__field">
+								<label for="" class="form__label">Куди</label>
+								<select class="form__input">
+									<option value=""></option>
+									<option value="Kyiv">Київ</option>
+									<option value="Dnipro">Дніпро</option>
+									<option value="Odesa">Одеса</option>
+								</select>
+							</div>
+							<div class="form__field">
+								<label for="" class="form__label">Дата</label>
+								<input type="date" class="form__input" style="padding-right: 7px;">
+							</div>
+							<div class="form__field">
+								<label for="" class="form__label">Електронна пошта</label>
+								<input type="text" class="form__input">
+							</div>
+							<div class="form__field">
+								<label for="" class="form__label">Клас</label>
+								<select class="form__input">
+									<option value=""></option>
+									<option value="First">Перший</option>
+									<option value="econom">Економ</option>
+									<option value="usual">Звичайний</option>
+								</select>
+							</div>
+							<div class="form__field form__number">
+								<div class="form__adults people-quantity">
+									<label for="" class="form__label">Дорослі</label>
+									<div class="people__settings">
+										<div class="people__option mark">
+											<img src="img/remove.png" alt="" class="people__image">
+										</div>
+										<input type="text" value="1" class="people__option central-option" disabled>
+										<div class="people__option mark">
+											<img src="img/plus.png" alt="" class="people__image">
+										</div>
+									</div>
 								</div>
-								<div class="a-c-right">
-									<p>Діти</p>
-									<h2>– <span>0</span> +</h2>
+								<div class="form__children people-quantity">
+									<label for="" class="form__label">Діти</label>
+									<div class="people__settings">
+										<div class="people__option mark">
+											<img src="img/remove.png" alt="" class="people__image">
+										</div>
+										<input type="text" value="1" class="people__option central-option" disabled>
+										<div class="people__option mark">
+											<img src="img/plus.png" alt="" class="people__image">
+										</div>
+									</div>
 								</div>
 							</div>
-							<div class="order">
-								<h1>ЗАМОВИТИ</h1>
-							</div>
+							<button type="submit" class="form__button">ЗАМОВИТИ</button>
 						</div>
-						<div class="cities">
-							<ul type="none">
-								<li>
-									<img src="img/airplane.png" alt="">
-									<p>KYIV</p>
-								</li>
-								<li>
-									<img src="img/airplane.png" alt="">
-									<p>DNIPRO</p>
-								</li>
-								<li>
-									<img src="img/airplane.png" alt="">
-									<p>ODESA</p>
-								</li>
-							</ul>
+						<div class="flights__field flights__cities">
+							<div class="flights__city city1">
+								<div class="for-filter"></div>
+								<img src="img/airplane(1).png" alt="" class="city__plane">
+								<p class="city__heading">KYIV</p>
+							</div>
+							<div class="flights__city city2">
+								<div class="for-filter"></div>
+								<img src="img/airplane(1).png" alt="" class="city__plane">
+								<p class="city__heading">DNIPRO</p>
+							</div>
+							<div class="flights__city city3">
+								<div class="for-filter"></div>
+								<img src="img/airplane(1).png" alt="" class="city__plane">
+								<p class="city__heading">ODESA</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -108,6 +143,7 @@
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 			<script src="js/parallax.min.js"></script>
 			<script src="js/script.js"></script>
+			<script src="js/ticket.js"></script>
 		</div>
 	</body>
 </html>

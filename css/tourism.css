@@ -434,6 +434,7 @@
     padding: 5%;
     transition: all 0.5s ease-out;
     position: relative;
+    text-decoration: none;
 }
 .restouranat::after{
     content: '';

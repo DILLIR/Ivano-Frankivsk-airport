@@ -1,10 +1,17 @@
+<html>
+<head>
+<title>Пример</title>
+</head>
+<body>
+
 <?php
 $servername = "localhost:3306/airport";
 $username = "airport";
 $password = "new_root";
+$dbdb = "airport";
 
 // Create connection
-$conn = mysqli_connect($servername, $username, $password);
+$conn = new mysqli($servername, $username, $password, $dbdb);
 
 // Check connection
 if (!$conn) {
@@ -15,9 +22,12 @@ $result = $conn->query("SELECT * FROM airport.planes");
 
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
-      echo "id: " . $row["id"]. " Name: " . $row["name"] . " " . "<br>";
+      echo "<h1 class='h5_b_1'>" . $row["name"] . $row["name"]."</h1>";
     }
   } else {
     echo "0 results";
 }
 ?>
+
+     </body>
+</html>

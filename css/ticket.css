@@ -17,7 +17,7 @@
 	background: #fff;
 	border-bottom: 5px solid #3CA0D0;
 	position: fixed;
-	z-index: 3;
+	z-index: 1000;
 }
 
 .header .container{
@@ -95,7 +95,7 @@
 }
 
 .ticket-mid {
-	width: calc(1280 / 1900 * 100vw);
+	width: 1280px;
 	margin: 0 auto;
 	margin-top: 160px;
 	margin-bottom: 30px;
@@ -106,7 +106,7 @@
 
 .ticket-mid .line {
 	background: #BDBDBD;
-	width: calc(1140 / 1900 * 100vw);
+	width: 1146px;
 }
 
 .line {
@@ -115,96 +115,147 @@
 	background: white;
 }
 
+
+/*FLIGHTS*/
+
+
 .flights {
-	width: calc(1280 / 1900 * 100vw);
+	width: 1280px;
 	border: 3px solid #086FA1;
-	height: 750px;
-	padding: 4%;
+	height: 100%;
+	padding: 30px 50px;
 	margin: 0 auto;
 	margin-bottom: 100px;
-}
-
-
-.flights > p {
-	color: #086FA1;
-	margin-bottom: 40px;
-	font-size: 36px;
-}
-
-.ticket-left {
-	width: calc(360 / 1900 * 100vw);
-	float: left;
-}
-
-.ticket-list {
 	display: flex;
 	flex-direction: column;
-	height: 380px;
 }
-
-.ticket-list li:nth-child(even) {
-	height: 40px;
-	width: calc(360 / 1900 * 100vw);
-	background: #F0F0F0;
-	border: 1px solid #3CA0D0;
-	margin-bottom: 37px;
-	margin-top: 5px;
+.flights__heading{
+	font-size: 36px;
+	color: #086FA1;
 }
-
-.adults-children {
+.flights__content{
+	width: 100%;
+	height: 100%;
 	display: flex;
 	justify-content: space-between;
+	margin-top: 50px;
+}
+.flights__field {
+	width: 48%;
+	height: 100%;
+}
+.form__field {
+	width: 360px;
+	margin-bottom: 38px;
+}
+.form__label {
+	font-size: 16px;
+	color: black;
+}
+.form__input {
 	width: 100%;
-}
-
-.adults-children span {
-	background: #F0F0F0;
+	height: 40px;
+	padding-left: 10px;
+	background-color: #F0F0F0;
 	border: 1px solid #3CA0D0;
-	padding:2px 8px;
 }
-
-.order {
-	color: white;
-	background: #086FA1;
-	border-radius: 5px;
-	text-align: center;
-	width: 56%;
-	margin-top: 40px;
-}
-
-.cities {
-	width: 50%;
-	font-size: 48px;
-	color: white;
-	float: right;
-}
-
-.cities li {
-	width: calc(550 / 1903s * 100vw);
-	height: 160px;
+.form__number {
 	display: flex;
-	background-size: cover;
+	justify-content: space-between;
+	align-items: center;
+}
+.people-quantity {
+	width: auto;
+	height: 100%;
+}
+.people__settings {
+	width: auto;
+	height: 40px;
+	display: flex;
+}
+.people__option {
+	width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.1s;
+}
+.central-option {
+	padding-left: 14px;
+	font-size: 18px;
+	background-color: #F0F0F0;
+	border: 1px solid #3CA0D0;
+}
+.people__image {
+	width: 20px;
+}
+.mark:hover{
+	background-color: #F0F0F0;
+}
+.form__button {
+	width: 160px;
+	height: 46px;
+	background-color: #086FA1;
+	border: 0;
+	color: white;
+	font-size: 22px;
+	border-radius: 5px;
+}
+.form__button:focus {
+	filter: brightness(0.9);
+}
+option {
+	font-size: 16px;
+}
+
+.flights__city {
+	width: 550px;
+	height: 160px;
+	margin-bottom: 27px;
 	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	display: flex;
 	align-items: center;
 	padding-left: 20px;
+	position: relative;
 }
-
-.cities li img {
-	width: calc(48 / 1900 * 100vw);
-	height: calc(48 / 1900 * 100vw);
-	margin-right: 17px;
-}
-
-.cities li:nth-child(1) {
+.city1 {
 	background-image: url(../img/kyiv.png);
 }
-.cities li:nth-child(2) {
+.city2 {
 	background-image: url(../img/dnipro.png);
-	margin: 27px 0;
 }
-.cities li:nth-child(3) {
+.city3 {
 	background-image: url(../img/odesa.png);
 }
+.city__plane {
+	width: 48px;
+	height: 48px;
+	margin-right: 17px;
+	margin-top: 26px;
+	z-index: 100;
+}
+.city__heading {
+	color: white;
+	font-size: 48px;
+	z-index: 100;
+}
+.for-filter {
+	width: 550px;
+	height: 160px;
+	background-color: rgb(0, 0, 0, 0.4);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+}
+
+
+/*FLIGHTS end*/
+
+
 
 .footer{
     height: 220px;
